@@ -1,0 +1,81 @@
+{
+  "_fuente": "Valores tomados del Brand Book Ethonik v3.0 (paleta pág. 8, tipografía pág. 9) y medidos directamente sobre POST ETHONIK - CLARO/OSCURO.",
+  "_discrepancias": [
+    "El brand book define 'Blanco suave #F5F7F5' (gris frío), pero los posts publicados usan un crema cálido #F3EFE6. El motor usa el crema porque es lo que ya está en el feed.",
+    "El teal #00696D y el celeste #B9E0DB de las píldoras numeradas NO están en la paleta del brand book, pero son el sistema real de las piezas. Quedan aquí como 'apoyo'.",
+    "Decidir cuál manda: si actualizas el brand book, cambio estos valores en este archivo y nada más."
+  ],
+
+  "nombre": "Ethonik",
+  "handle": "@ethonik",
+  "sitio": "https://ethonik.com",
+  "tagline": "Inteligencia que conecta.",
+
+  "colores": {
+    "bosque_profundo": "#0B2E1B",
+    "verde_tecnico": "#2E7D32",
+    "lima": "#95E000",
+    "fondo_oscuro": "#07100C",
+    "blanco_suave": "#F5F7F5",
+    "texto_negro": "#111111",
+    "crema": "#F3EFE6",
+    "teal": "#00696D",
+    "teal_claro": "#B9E0DB",
+    "teal_oscuro": "#17494A"
+  },
+
+  "gradiente_titulo": "linear-gradient(90deg,#0B2E1B 0%,#2E7D32 55%,#95E000 100%)",
+  "gradiente_titulo_oscuro": "linear-gradient(90deg,#2E7D32 0%,#5FA81E 45%,#95E000 100%)",
+
+  "modos": {
+    "claro": {
+      "fondo": "#F3EFE6",
+      "texto": "#111111",
+      "texto_suave": "#4A524E",
+      "logo": "logos/logo_principal_color.svg",
+      "pildora_fondo": "#B9E0DB",
+      "pildora_texto": "#111111",
+      "pildora_titulo": "#0B2E1B",
+      "cap": "#00696D",
+      "pie": "#8A908B"
+    },
+    "oscuro": {
+      "fondo": "#07100C",
+      "texto": "#FFFFFF",
+      "texto_suave": "#C7D0CB",
+      "logo": "logos/logo_principal_blanco.svg",
+      "pildora_fondo": "#17494A",
+      "pildora_texto": "#EAF2EF",
+      "pildora_titulo": "#95E000",
+      "cap": "#00696D",
+      "pie": "#7E8A84"
+    }
+  },
+
+  "tipografia": {
+    "familia": "Inter",
+    "_nota": "Brand book pág. 9: primaria Inter; alternativas Montserrat o Poppins. Escala del brand book es para documento; aquí está escalada a lienzo de 1080 px.",
+    "archivos": [
+      { "familia": "Inter", "peso": 400, "archivo": "fuentes/inter-latin-400-normal.woff2" },
+      { "familia": "Inter", "peso": 600, "archivo": "fuentes/inter-latin-600-normal.woff2" },
+      { "familia": "Inter", "peso": 700, "archivo": "fuentes/inter-latin-700-normal.woff2" },
+      { "familia": "Inter", "peso": 900, "archivo": "fuentes/inter-latin-900-normal.woff2" }
+    ]
+  },
+
+  "formatos": {
+    "vertical": [1080, 1350],
+    "cuadrado": [1080, 1080],
+    "historia": [1080, 1920]
+  },
+
+  "layout": {
+    "margen": 90,
+    "logo_alto": 176,
+    "antetitulo_px": 46,
+    "titulo_px": 108,
+    "bajada_px": 34,
+    "item_px": 26,
+    "pie_px": 24
+  }
+}
