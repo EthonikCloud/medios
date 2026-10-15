@@ -98,7 +98,7 @@ body{{
 }}
 .titular{{
   font-size:{L["titulo_px"]}px;font-weight:900;text-transform:uppercase;
-  line-height:.98;letter-spacing:-.015em;text-wrap:balance;
+  line-height:1.08;padding-top:.06em;letter-spacing:-.015em;text-wrap:balance;
   background:{grad};-webkit-background-clip:text;background-clip:text;color:transparent;
 }}
 .bajada{{
