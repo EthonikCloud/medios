@@ -61,7 +61,7 @@ def html_escena(m, esc, indice, total):
     if tipo == "gancho":
         cuerpo = f"""
   <div class="esp"></div>
-  <div class="titular" style="font-size:120px;line-height:.97">{R.esc(esc["texto"])}</div>
+  <div class="titular" style="font-size:120px;line-height:1.08;padding-top:.06em">{R.esc(esc["texto"])}</div>
   <div class="esp"></div>"""
     elif tipo == "cierre":
         cuerpo = f"""
