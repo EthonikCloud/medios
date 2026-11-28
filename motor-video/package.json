@@ -1,0 +1,25 @@
+{
+  "name": "motor-video-ethonik",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plantilla de video vertical de Ethonik con HyperFrames",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@fontsource/inter": "5.3.0",
+    "gsap": "3.15.0",
+    "hyperframes": "0.8.191",
+    "puppeteer-core": "25.16.0"
+  },
+  "overrides": {
+    "postcss": "8.5.31",
+    "ansi-regex": "6.4.0",
+    "tslib": "2.8.1",
+    "ws": "8.22.0",
+    "@hono/node-server": "2.1.5",
+    "semver": "7.8.5",
+    "@swc/helpers": "0.5.23",
+    "hono": "4.13.13"
+  }
+}

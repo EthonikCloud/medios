@@ -1,0 +1,80 @@
+<template>
+  <style>
+{{FUENTES}}
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      font-family: {{FAMILIA}};
+      color: var(--texto);
+      --texto: {{C_TEXTO}};
+      --suave: {{C_SUAVE}};
+      --apoyo: {{C_APOYO}};
+      --acento: {{C_ACENTO}};
+    }
+    /* isolation: cada escena es su propio contexto de apilamiento; sin esto, el velo y la caja
+       de la escena saliente (z-index 1 y 2) se pintan encima de la entrante durante el fundido. */
+    #root .pantalla { position: absolute; inset: 0; isolation: isolate; }
+    #root .fondo { position: absolute; inset: 0; z-index: 0; }
+    #root .fondo svg { display: block; width: {{ANCHO}}px; height: {{ALTO}}px; }
+    #root .velo { position: absolute; inset: 0; z-index: 1; background: {{VELO}}; }
+
+    /* Bloque de texto centrado en el cuadro (centro y = 960) y dentro de la zona segura de TikTok/Reels:
+       nada en los 420 px de abajo (termina en y = 1500) ni en los 140 de la derecha; 140 también a la
+       izquierda para que quede centrado. */
+    #root .caja {
+      position: absolute; z-index: 2;
+      left: {{CAJA_X}}px; top: {{CAJA_Y}}px; width: {{CAJA_W}}px; height: {{CAJA_H}}px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center;
+    }
+    #root .bloque { display: flex; flex-direction: column; align-items: center; width: 100%; }
+
+    /* Titular en mayúsculas, peso 900: line-height >= 1,08 y padding-top para que
+       las tildes de las mayúsculas no se monten sobre la línea de arriba. */
+    #root .grad {
+      width: 100%; font-weight: 900; text-transform: uppercase;
+      line-height: 1.12; padding: 0.1em 0 0.06em; letter-spacing: -0.015em; word-spacing: 0.06em;
+      text-wrap: balance;
+      background: {{GRADIENTE}};
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    #root .punto-titular {
+      width: 100%; font-weight: 900; line-height: 1.1; padding-top: 0.06em;
+      color: var(--texto); text-wrap: balance;
+    }
+    #root .apoyo {
+      width: 100%; margin-top: 44px; font-weight: 600; line-height: 1.28;
+      color: var(--apoyo); text-wrap: balance;
+    }
+    #root .subrayado { width: 240px; height: 10px; margin-top: 48px; border-radius: 999px; background: var(--acento); }
+
+    #root .logo { display: block; height: 150px; width: auto; margin-bottom: 72px; }
+    #root .firma { display: flex; flex-direction: column; align-items: center; margin-top: 64px; }
+    #root .filete { width: 84px; height: 6px; border-radius: 999px; background: var(--acento); }
+    #root .cta { margin-top: 30px; font-weight: 600; letter-spacing: 0.04em; color: var(--apoyo); }
+  </style>
+
+  <div
+    id="root"
+    data-composition-id="{{ID}}"
+    data-width="{{ANCHO}}"
+    data-height="{{ALTO}}"
+    data-composition-variables='{{VARIABLES}}'
+  >
+    <div id="{{ID}}-pantalla" class="pantalla">
+      <div class="fondo" data-layout-ignore>{{FONDO_SVG}}</div>
+      <div class="velo"></div>
+      <div id="{{ID}}-caja" class="caja">
+{{CONTENIDO}}
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+{{TWEENS}}
+    window.__timelines = window.__timelines || {};
+    window.__timelines["{{ID}}"] = tl;
+  </script>
+</template>

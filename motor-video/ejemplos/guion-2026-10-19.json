@@ -1,0 +1,12 @@
+{"videos":[{"id":"fecha-de-caducidad","escenas":[
+  {"tipo":"gancho","duracion":3.5,"texto":"Su modelo de IA tiene fecha de caducidad"},
+  {"tipo":"punto","duracion":9,"texto":"No es que quede obsoleto. Sale del catálogo.","apoyo":"OpenAI lo publicó el 14 de octubre"},
+  {"tipo":"punto","duracion":9,"texto":"GPT-4o y GPT-4.1 salen de la API el 14 de enero","apoyo":"Los modelos afinados se apagan con ellos"},
+  {"tipo":"punto","duracion":9,"texto":"Y el modelo nuevo de Google sube al doble","apoyo":"USD 2 hasta el 30 nov; USD 4 desde el 1 dic"},
+  {"tipo":"cierre","duracion":5,"texto":"Revise qué proceso depende de esas fechas","cta":"Fuentes en la descripción"}]},
+{"id":"enzima-en-disputa","escenas":[
+  {"tipo":"gancho","duracion":3.5,"texto":"La IA encontró enzimas nuevas. ¿O las copió?"},
+  {"tipo":"punto","duracion":9,"texto":"Un modelo reportó una familia de enzimas nuevas","apoyo":"Buscó entre 20 mil proteínas candidatas"},
+  {"tipo":"punto","duracion":9,"texto":"Un biólogo dice que su equipo ya las tenía","apoyo":"Sin publicar, desde 2022, en Copenhague"},
+  {"tipo":"punto","duracion":9,"texto":"La empresa niega haber usado sus conversaciones","apoyo":"El trabajo no pasó revisión por pares"},
+  {"tipo":"cierre","duracion":5,"texto":"Anote qué modelo usó y con qué datos","cta":"Fuentes en la descripción"}]}]}

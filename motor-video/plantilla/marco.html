@@ -1,0 +1,49 @@
+<template>
+  <style>
+{{FUENTES}}
+    #root {
+      position: absolute;
+      inset: 0;
+      font-family: {{FAMILIA}};
+      --suave: {{C_SUAVE}};
+      --acento: {{C_ACENTO}};
+    }
+    /* Franja superior persistente, dentro de la zona segura (empieza en y = 232 > 220).
+       Aquí viven el logo del gancho y el indicador de avance de los puntos: no se
+       reconstruyen en cada escena, así que no parpadean al cambiar de escena. */
+    #root .cabecera {
+      position: absolute;
+      left: {{CAJA_X}}px; width: {{CAJA_W}}px; top: {{CAB_Y}}px; height: {{CAB_H}}px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #root .logo-chico { position: absolute; height: {{CAB_H}}px; width: auto; display: block; }
+    #root .indicador { position: absolute; display: flex; align-items: center; gap: 14px; }
+    #root .barra { position: relative; width: 64px; height: 8px; }
+    #root .barra .pista,
+    #root .barra .on { position: absolute; inset: 0; border-radius: 999px; }
+    #root .barra .pista { background: var(--suave); opacity: 0.28; }
+    #root .barra .on { background: var(--acento); }
+    #root .etqs { position: relative; width: 76px; height: 40px; margin-left: 10px; }
+    #root .etq {
+      position: absolute; left: 0; top: 0; line-height: 40px;
+      font-size: 32px; font-weight: 600; color: var(--suave); font-variant-numeric: tabular-nums;
+    }
+  </style>
+
+  <div id="root" data-composition-id="marco" data-width="{{ANCHO}}" data-height="{{ALTO}}">
+    <div class="cabecera">
+      <img id="marco-logo" class="logo-chico" src="assets/logo.svg" alt="Ethonik" style="opacity:{{LOGO_O}}" />
+      <div id="marco-indicador" class="indicador" style="opacity:{{IND_O}}">
+        {{BARRAS}}
+        <div class="etqs">{{ETIQUETAS}}</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+{{TWEENS}}
+    window.__timelines = window.__timelines || {};
+    window.__timelines["marco"] = tl;
+  </script>
+</template>

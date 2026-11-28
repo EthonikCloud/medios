@@ -1,0 +1,7 @@
+node_modules/
+.venv/
+salida/
+trabajo/
+*.mp4
+*.wav
+.DS_Store
